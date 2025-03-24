@@ -1,5 +1,5 @@
-const workerUrl = "https://kao88.github.io/quiz-app/sqlite.worker.js"; // 替換為你的實際路徑
-const wasmUrl = "https://kao88.github.io/quiz-app/sql-wasm.wasm"; // 替換為你的實際路徑
+const workerUrl = "https://kao88.github.io/ex/sqlite.worker.js"; // 替換為你的實際路徑
+const wasmUrl = "https://kao88.github.io/ex/sql-wasm.wasm"; // 替換為你的實際路徑
 let dbWorker;
 let questions = [];
 let currentQuestionIndex = 0;
@@ -13,7 +13,7 @@ async function initDatabase() {
                 config: {
                     serverMode: "full",
                     requestChunkSize: 4096,
-                    url: "https://kao88.github.io/quiz-app/db.txt" // 替換為你的實際路徑
+                    url: "https://kao88.github.io/ex/db.txt" // 替換為你的實際路徑
                 }
             }],
             workerUrl,
