@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E知識庫</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="container">
+        <h1>能力知識庫</h1>
+        <h2>Ai 生成隨選 5 題</h2>
+        <button id="startQuiz">開始測驗</button>
+        <div id="quizContainer" style="display: none;">
+            <h3 id="questionNumber"></h3>
+            <p id="questionText"></p>
+            <ul id="options"></ul>
+            <input type="number" id="userAnswer" min="1" max="4" placeholder="輸入答案 (1-4)">
+            <button id="submitAnswer">提交</button>
+            <div id="feedback"></div>
+            <p id="explanation" style="display: none;"></p>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>測驗完成！</h2>
+            <p>OK</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>2025 Copyright © Ai Crop.</p>
+    </div>
+
+    <script src="https://unpkg.com/sql.js-httpvfs/dist/sql-wasm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
