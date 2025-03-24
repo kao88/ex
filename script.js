@@ -4,9 +4,15 @@ let dbWorker;
 let questions = [];
 let currentQuestionIndex = 0;
 
+// 檢查 createDbWorker 是否存在
+console.log("createDbWorker 是否存在:", typeof createDbWorker);
+
 async function initDatabase() {
     try {
         console.log("正在初始化數據庫...");
+        if (typeof createDbWorker !== "function") {
+            throw new Error("createDbWorker 未定義，請檢查 sql.js-httpvfs 腳本是否正確加載");
+        }
         dbWorker = await createDbWorker(
             [{
                 from: "inline",
