@@ -1,5 +1,5 @@
-const workerUrl = "sqlite.worker.js";
-const wasmUrl = "sql-wasm.wasm";
+const workerUrl = "https://kao88.github.io/ex/sqlite.worker.js";
+const wasmUrl = "https://kao88.github.io/ex/sql-wasm.wasm";
 let dbWorker;
 let questions = [];
 let currentQuestionIndex = 0;
@@ -13,7 +13,7 @@ async function initDatabase() {
                 config: {
                     serverMode: "full",
                     requestChunkSize: 4096,
-                    url: "db.txt" // 確保這是正確的路徑
+                    url: "https://kao88.github.io/ex/db.txt" // 確保這是正確的路徑
                 }
             }],
             workerUrl,
