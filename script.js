@@ -13,7 +13,7 @@ async function initDatabase() {
                 config: {
                     serverMode: "full",
                     requestChunkSize: 4096,
-                    url: "https://kao88.github.io/ex/db.txt" // 替換為你的實際路徑
+                    url: "https://kao88.github.io/ex/db.db" // 替換為你的實際路徑
                 }
             }],
             workerUrl,
