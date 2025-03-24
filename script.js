@@ -1,5 +1,5 @@
-const workerUrl = "https://kao88.github.io/ex/sqlite.worker.js";
-const wasmUrl = "https://kao88.github.io/ex/sql-wasm.wasm";
+const workerUrl = "https://kao88.github.io/quiz-app/sqlite.worker.js"; // 替換為你的實際路徑
+const wasmUrl = "https://kao88.github.io/quiz-app/sql-wasm.wasm"; // 替換為你的實際路徑
 let dbWorker;
 let questions = [];
 let currentQuestionIndex = 0;
@@ -13,7 +13,7 @@ async function initDatabase() {
                 config: {
                     serverMode: "full",
                     requestChunkSize: 4096,
-                    url: "https://kao88.github.io/ex/db.txt" // 確保這是正確的路徑
+                    url: "https://kao88.github.io/quiz-app/db.txt" // 替換為你的實際路徑
                 }
             }],
             workerUrl,
@@ -125,7 +125,7 @@ document.getElementById("startQuiz").addEventListener("click", async () => {
     } catch (error) {
         console.error("測驗啟動失敗:", error);
         alert("無法啟動測驗，請檢查控制台以獲取更多信息");
-        document.getElementById("startQuiz").style.display = "block"; // 恢復按鈕
+        document.getElementById("startQuiz").style.display = "block";
     }
 });
 
